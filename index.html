@@ -1,11 +1,18 @@
 <html>
 <head>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/matrix_viz.css">
 <script src="lib/d3_v3.js"></script>
+<script src="lib/jQuery3.2.1.js"></script>
 <script src="matrix_viz.js"></script>
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+    tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+  });
 </script>
 
 <title>Matrix Viz</title>
@@ -16,7 +23,50 @@
 	<div style="height:50px"></div>
 	<div class="row">
 		<div class="col-md-2"></div>
-		<div class="col-md-8"><h2>Nothing here yet, but eventually I'll use this for testing my code.</h2></div>
+		<div class="col-md-8">
+			<h2>Nothing here yet, but eventually I'll use this for testing my code.</h2>
+			<div id="test_latex">\( \text{Some latex?} \int x^2 dx = 2x \)</div>
+			<div id="test_text">Test text?</div>
+			<div id="test_matrix">\( 
+				\begin{bmatrix}1 & 2 & 3\\
+                3 & 1 & 2\\
+                2 & 3 & 1
+                \end{bmatrix} \)
+            </div>
+
+            <div id="mat1" class="math-set">
+            	\begin{bmatrix}1&2&3\\3&1&2\\2&3&1\end{bmatrix}
+            </div>
+
+            <div id="eq1" class="math-set">
+            	`\int x^2 = 2x`
+            </div>
+
+
+            <div class="math-set">
+              <div class="slide">
+                <div>`KE_{rot} = \frac1 2 I \omega^2`</div>
+              </div>
+              <div class="slide">
+                <div>`\omega =sqrt(2\alpha \Delta degrees)`</div>
+                <div>`KE_{rot} = \frac1 2 I sqrt(2\alpha \Delta degrees)`</div>
+              </div>
+              <div class="slide">
+                <div>`\alpha = frac\{tau_{max}} {I}`</div>
+              </div>
+              <div class="slide">
+                <div>`KE_{rot} = \frac1 2 I \sqrt{(2 (\frac{\tau_{max}} {I}) \Delta degrees)}^2`</div>
+                <div>`KE_{rot} = \frac1 2 I \(2 (\frac{\tau_{max}} {I}) \Delta degrees)`</div>
+              </div>
+              <div class="slide">
+                <div>`KE_{rot} = \tau_{max}\Delta degrees`</div>
+              </div>
+              <div class="slide">
+                <div>`\tau_{max} = I \alpha`</div>
+                <div>`KE_{rot} = I \ \alpha \ \Delta degrees`</div>
+              </div>
+            </div>
+		</div>
 	</div>
 </div>
 
