@@ -4,7 +4,6 @@
 <link rel="stylesheet" href="css/matrix_viz.css">
 <script src="lib/d3_v3.js"></script>
 <script src="lib/jQuery3.2.1.js"></script>
-<script src="matrix_viz.js"></script>
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -24,11 +23,11 @@
 	<div class="row">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<h2>Nothing here yet, but eventually I'll use this for testing my code.</h2>
+			<h2>Just playing around...</h2>
 			<div id="test_latex">\( \text{Some latex?} \int x^2 dx = 2x \)</div>
 			<div id="test_text">Test text?</div>
 			<div id="test_matrix">\( 
-				\begin{bmatrix}1 & 2 & 3\\
+				\begin{bmatrix} \frac{1}{2} & 2 & 3\\
                 3 & 1 & 2\\
                 2 & 3 & 1
                 \end{bmatrix} \)
@@ -66,10 +65,16 @@
                 <div>`KE_{rot} = I \ \alpha \ \Delta degrees`</div>
               </div>
             </div>
+
+            <hr>
+
+            <div id="vis"></div>
 		</div>
 	</div>
 </div>
 
-<script src="index.js"></script>
+<!-- <script src="matrix_viz.js"></script> -->
+<script src="d3_matrix.js"></script>
+
 </body>
 </html>
